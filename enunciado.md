@@ -126,11 +126,13 @@ Depois:
 | Não executa | 0 |
 | Segmenta o amarelo | 1 |
 | Segue a linha amarela | 2 |
-| De alguma forma sabe que deu uma volta. Pode ser por tempo ou por ver 
-um animal mais de uma vez, ou por odometria | 3.0 |
+| De alguma forma sabe que deu uma volta (veja abaixo)| 3.0 |
 | Reconhece o animal de interesse e dá output claro | 4.0 |
 | Passa a seguir a nov apista | 5.0 |
 
+
+*** Saber que deu uma volta  pode ser por tempo ou por ver 
+um animal mais de uma vez, ou por odometria. Para contar com uma volta o robô precisa pelo menos voltar à lateral amarela do quadrado que tem o cachorro. 
 
 Casos intermediários ou omissos da rubrica serão decididos pelo professor.
 
@@ -226,17 +228,17 @@ Para rodar, recomendamos que faça:
 
 Depois:
 
-    rosrun p2_211 Q4.py3
+    rosrun p2_211 Q3.py
 
 
 
 |Resultado| Conceito| 
 |---|---|
 | Não executa | 0 |
-| FAz o robo dar um giro aleatorio | 0.5 |
-| Localize o cilindro de sua cor e se aproxima visualmente| 1.5 |
+| Faz o robo dar um giro aleatório | 0.5 |
+| Localiza o cilindro de sua cor e se aproxima visualmente| 1.5 |
 | Chega a 16 cm usando o laser| 2.5 |
 | Usa a garra para bater no cilindro | 3.0 |
-| FAz os ajustes necessarios para pegar | 5.0 |
+| Faz os ajustes necessarios para pegar o cilindro | 5.0 |
 
 
