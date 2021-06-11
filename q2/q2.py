@@ -96,6 +96,21 @@ def processa(frame_gray):
     
     return l_brancas, l_negras, l_brancas_negras, l_negras_brancas, color
 
+## Adicionados DEPOIS da prova para melhorar a clareza
+
+def resize_big(img, scale):
+    """ Resizes a grayscale image"""
+    out_size = np.array(img.shape)*int(scale)
+    print(img.shape, out_size)
+    return cv2.resize(src=img, dsize=tuple(out_size), interpolation=cv2.INTER_NEAREST)
+
+def resize_big_color(img, scale):
+    """ Resizes a grayscale image"""
+    out_size = np.array(img.shape)*int(scale)
+    out_size = out_size[:-1]
+    print(img.shape, out_size)
+    return cv2.resize(src=img, dsize=tuple(out_size), interpolation=cv2.INTER_NEAREST)
+
 
 if __name__ == "__main__":
 
@@ -103,6 +118,9 @@ if __name__ == "__main__":
     bgr = frames
     
     print("Se a janela com a imagem não aparecer em primeiro plano dê Alt-Tab")
+
+    print("No código-fonte há imagens de testes com GABARITOS. Temos também um notebook de rascunho na pasta")
+
 
     for frame in bgr: 
         # Capture frame-by-frame
@@ -115,7 +133,7 @@ if __name__ == "__main__":
         brancas, negras, l_brancas_negras, l_negras_brancas, saida_color = processa(gray)
 
         
-
+        saida_color = resize_big_color(saida_color, 4)
         # NOTE que em testes a OpenCV 4.0 requereu frames em BGR para o cv2.imshow
         cv2.imshow('imagem processada', saida_color)
 
